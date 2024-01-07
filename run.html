@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倾尽所有</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+        .run-up{
+            width: 100vw;
+            height: 100vh;
+        }
+        .run-down{
+            position: absolute;
+            top: 40%;
+            width: 100vw;
+            height: 75vh;
+            background: linear-gradient(to bottom,transparent,#000,#000);
+        }
+        .run-center{
+            position: absolute;
+            z-index: 10;
+            color: #fff;
+            font-size: 50px;
+            font-family: monospace;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .run-cd{
+            width: 20vw;
+            height: 7vh;
+            top: 83%;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 30px;
+            font-family: sans-serif;
+            font-weight: 900;
+            background-color: #fff;
+            position: absolute;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <audio src="./sound/Lulleaux,Kid Princess - Empty Love.mp3" class="run-bk" autoplay loop></audio>
+    <img src="./img/run-img.jpg" alt="" class="run-up">
+    <p class="run-center">倾尽所有</p>
+    <div class="run-down"></div>
+    <button class="run-cd">进入<svg class="run-icon" style="width: 5vw;height: 5vh;vertical-align: middle;fill: currentColor;overflow: hidden;;margin-bottom: 5px;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1843"><path d="M844.15488 512.70656L571.58656 254.95552c-11.84768-11.84768-29.62432-11.84768-41.48224 0-11.84768 11.84768-11.84768 29.62432 0 41.472L749.34272 503.808H201.2672c-17.77664 0-29.62432 11.84768-29.62432 29.63456 0 17.7664 11.84768 29.62432 29.62432 29.62432h548.08576l-219.2384 207.38048c-11.84768 11.84768-11.84768 29.63456 0 41.48224 5.92896 5.92896 14.81728 8.88832 20.736 8.88832 5.92896 0 14.81728-2.95936 20.736-8.88832l272.55808-257.7408c5.92896-5.92896 8.88832-14.81728 8.88832-20.736 0.01024-5.92896-2.94912-14.81728-8.87808-20.74624z m0 0" fill="#2C2C2C" p-id="1844"></path></svg></button>
+    <script>
+        document.querySelector(".run-bk").volume = 0.2;
+        const cd = document.querySelector(".run-cd");
+        cd.onclick = () => {
+            open("./indexall.html",name="_self")
+        }
+    </script>
+</body>
+</html>
